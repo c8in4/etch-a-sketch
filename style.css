@@ -51,8 +51,6 @@ div {
     max-width: 80dvw;
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between;
-    align-items: space-between; */
     outline: var(--color-primary) solid 0.2rem;
     background-color: white;
 }

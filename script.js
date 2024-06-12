@@ -2,7 +2,7 @@ const container = document.querySelector("#container");
 const button = document.querySelector("#button");
 button.addEventListener("click", clearGrid);
 
-let gridSize = 16;
+let gridSize = 8;
 
 createGrid(gridSize);
 
@@ -14,9 +14,9 @@ function clearGrid() {
 
 function getGridSize() {
     do {
-        gridSize = +prompt("Enter a grid size from 16 to 100.");
-        if (gridSize === 0) { gridSize = 16 };
-    } while (isNaN(gridSize) || gridSize < 16 || gridSize > 100);
+        gridSize = +prompt("Enter a grid size from 8 to 48.");
+        if (gridSize === 0) { gridSize = 8 };
+    } while (isNaN(gridSize) || gridSize < 8 || gridSize > 48);
 }
 
 function createGrid(size) {
