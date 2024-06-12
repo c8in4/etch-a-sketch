@@ -28,6 +28,14 @@ body {
 
 main {
     flex: 1;
+    text-align: center;
+}
+
+button {
+    margin: 1.6rem;
+    padding: 0.8rem 3.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 div {
@@ -42,7 +50,8 @@ div {
     max-width: 80dvw;
     display: flex;
     flex-wrap: wrap;
-    justify-content: stretch;
-    align-items: stretch;
+    /* justify-content: space-between;
+    align-items: space-between; */
     outline: var(--color-primary) solid 0.2rem;
+    background-color: white;
 }
