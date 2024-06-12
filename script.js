@@ -39,5 +39,13 @@ function createGrid(size) {
 function colorPixel(e) {
     e.stopPropagation();
     const pixel = e.target;
-    pixel.style.backgroundColor = "green";
+    pixel.style.backgroundColor = `${randomColor()}`;
+}
+
+function randomColor() {
+    return `rgb(${getRandomNumber(255)}, ${getRandomNumber(255)}, ${getRandomNumber(255)})`
+}
+
+function getRandomNumber(num) {
+    return Math.floor(Math.random() * num) + 1;
 }
