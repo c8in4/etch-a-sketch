@@ -14,9 +14,14 @@ function clearGrid() {
 }
 
 function getGridSize() {
+
+    // TODO: make sure to accept numbers only
     do {
         gridSize = +prompt("Enter a number from 16 to 100.");
-    } while ( 16 > gridSize || gridSize > 100);
+    } while (isNaN(gridSize)
+        || (gridSize < 16
+        || gridSize > 100)
+    );
 }
 
 
