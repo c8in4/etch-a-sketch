@@ -1,9 +1,8 @@
-let gridSize = 16;
-
 const container = document.querySelector("#container");
 const button = document.querySelector("#button");
-
 button.addEventListener("click", clearGrid);
+
+let gridSize = 16;
 
 createGrid(gridSize);
 
@@ -14,17 +13,14 @@ function clearGrid() {
 }
 
 function getGridSize() {
-
-    // TODO: make sure to accept numbers only
     do {
-        gridSize = +prompt("Enter a number from 16 to 100.");
+        gridSize = +prompt("Enter a grid size from 16 to 100.");
+        if (gridSize !== null) gridSize = 16;
     } while (isNaN(gridSize)
         || (gridSize < 16
         || gridSize > 100)
     );
 }
-
-
 
 function createGrid(size) {
     const pixelHeight = (container.offsetHeight / size);
@@ -32,6 +28,7 @@ function createGrid(size) {
 
     for (let i = 1; i <= (size * size); i++) {
         const pixel = document.createElement("div");
+        pixel.style.outline = "0.1px solid lightgrey";
         pixel.style.height = `${pixelHeight}px`;
         pixel.style.width = `${pixelWidth}px`;
         pixel.addEventListener("mouseover", colorPixel);
