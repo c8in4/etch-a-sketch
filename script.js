@@ -15,11 +15,8 @@ function clearGrid() {
 function getGridSize() {
     do {
         gridSize = +prompt("Enter a grid size from 16 to 100.");
-        if (gridSize === 0) {gridSize = 16};
-    } while (isNaN(gridSize)
-        || (gridSize < 16
-        || gridSize > 100)
-    );
+        if (gridSize === 0) { gridSize = 16 };
+    } while (isNaN(gridSize) || gridSize < 16 || gridSize > 100);
 }
 
 function createGrid(size) {
@@ -31,21 +28,15 @@ function createGrid(size) {
         pixel.style.outline = "0.1px solid lightgrey";
         pixel.style.height = `${pixelHeight}px`;
         pixel.style.width = `${pixelWidth}px`;
-        pixel.addEventListener("mouseover", colorPixel);
+        pixel.style.backgroundColor = "black";
+
+        let opacity = 0;
+        pixel.style.opacity = opacity;
+        pixel.addEventListener("mouseover", (e) => {
+            opacity += 0.1;
+            pixel.style.opacity = opacity;
+        });
+
         container.appendChild(pixel);
     }
 };
-
-function colorPixel(e) {
-    e.stopPropagation();
-    const pixel = e.target;
-    pixel.style.backgroundColor = `${randomColor()}`;
-}
-
-function randomColor() {
-    return `rgb(${getRandomNumber(255)}, ${getRandomNumber(255)}, ${getRandomNumber(255)})`
-}
-
-function getRandomNumber(num) {
-    return Math.floor(Math.random() * num) + 1;
-}
