@@ -15,7 +15,7 @@ function clearGrid() {
 function getGridSize() {
     do {
         gridSize = +prompt("Enter a grid size from 16 to 100.");
-        if (gridSize !== null) gridSize = 16;
+        if (gridSize === null) gridSize = 16;
     } while (isNaN(gridSize)
         || (gridSize < 16
         || gridSize > 100)
