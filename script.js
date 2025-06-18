@@ -11,4 +11,12 @@ function createGrid(gridSize = standardGridSize) {
     }
 }
 
+container.addEventListener('mouseover', (event) => {
+    if (event.target.classList == 'pixel') paintPixel(event.target)
+})
+
+function paintPixel(pixel) {
+    pixel.style.backgroundColor = 'black'
+}
+
 createGrid()
