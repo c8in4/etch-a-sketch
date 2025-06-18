@@ -1,19 +1,11 @@
-:root {
-    --bg-color-primary: #333;
-    --color-primary: #eee;
-}
-
 html {
-    box-sizing: border-box;
     font-size: 62.5%;
-    background-color: var(--bg-color-primary);
-    color: var(--color-primary);
 }
 
 *,
 *::after,
 *::before {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 body {
@@ -28,29 +20,4 @@ body {
 
 main {
     flex: 1;
-    text-align: center;
-}
-
-button {
-    margin: 1.6rem;
-    padding: 0.8rem 3.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-div {
-    margin: 0;
-    padding: 0;
-    border-radius: 0.7%;
-}
-
-#container {
-    aspect-ratio: 1;
-    height: 64rem;
-    max-height: 80dvw;
-    max-width: 80dvw;
-    display: flex;
-    flex-wrap: wrap;
-    outline: var(--color-primary) solid 0.2rem;
-    background-color: white;
 }
