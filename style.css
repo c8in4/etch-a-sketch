@@ -21,3 +21,16 @@ body {
 main {
     flex: 1;
 }
+
+#container {
+    aspect-ratio: 1;
+    width: 50rem;
+    display: flex;
+    flex-wrap: wrap;
+    outline: 1px solid black;
+}
+
+div.pixel {
+    aspect-ratio: 1;
+    border: 1px solid lightgrey;
+}
